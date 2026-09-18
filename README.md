@@ -15,6 +15,8 @@
 
 [在线体验](https://gesture-nebula.zgao82277.chatgpt.site/) · [快速开始](#快速开始) · [手势说明](#手势说明) · [技术架构](docs/ARCHITECTURE.md) · [参与贡献](CONTRIBUTING.md)
 
+![掌间星云交互界面预览](docs/gesture-nebula-preview.jpg)
+
 </div>
 
 ## 项目亮点
