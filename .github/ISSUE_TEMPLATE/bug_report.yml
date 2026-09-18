@@ -1,0 +1,51 @@
+name: Bug 报告
+description: 报告可复现的识别、交互或显示问题
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: 感谢反馈。请不要上传包含个人或敏感信息的摄像头画面。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 问题描述
+      description: 实际发生了什么？你原本期望什么？
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 打开……
+        2. 做出……手势
+        3. 观察到……
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 环境
+      description: 操作系统、浏览器及版本
+      placeholder: macOS 15 / Chrome 140
+    validations:
+      required: true
+  - type: dropdown
+    id: input
+    attributes:
+      label: 输入方式
+      options:
+        - 单手摄像头手势
+        - 双手摄像头手势
+        - 鼠标
+        - 触屏
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: 控制台错误
+      description: 如有错误，请粘贴文本；请先移除隐私信息。
+      render: shell
+

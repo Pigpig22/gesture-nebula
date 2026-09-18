@@ -1,0 +1,9 @@
+.DS_Store
+__pycache__/
+.sites-runtime/
+*.tar.gz
+
+# GitHub 源码仓库通过 scripts/fetch_mediapipe.py 获取这些固定版本资源。
+dist/vendor/vision_bundle.mjs
+dist/vendor/hand_landmarker.task
+dist/vendor/wasm/

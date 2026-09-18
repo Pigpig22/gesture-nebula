@@ -1,0 +1,25 @@
+name: 功能建议
+description: 提议新的粒子效果、手势或体验改进
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 使用场景
+      description: 你希望在哪种情况下使用这个功能？
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议方案
+      description: 描述希望的交互或视觉效果。
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 可选方案
+      description: 如果有其他实现思路，也可以写在这里。
+

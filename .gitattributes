@@ -1,0 +1,10 @@
+*.js text eol=lf
+*.mjs text eol=lf linguist-language=JavaScript
+*.css text eol=lf
+*.html text eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.command text eol=lf
+*.wasm binary
+*.task binary
+

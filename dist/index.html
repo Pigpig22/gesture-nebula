@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070a12">
+  <title>掌间星云 · NEBULA</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='52'%3E✦%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="universe" aria-label="由手势或鼠标控制的三维发光粒子星云"></canvas>
+  <div class="grain" aria-hidden="true"></div>
+  <header>
+    <a class="brand" href="./"><span class="brand-icon">✳</span><span>NEBULA<span class="brand-sub">掌间星云 / INTERACTIVE SPACE</span></span></a>
+    <div class="top-actions"><span class="local-badge"><i></i> 本地运行 · 无视频上传</span><button class="icon-button" id="fullscreen" title="切换全屏" aria-label="切换全屏">⛶</button></div>
+  </header>
+  <main>
+    <section class="intro">
+      <div class="eyebrow"><span></span> A UNIVERSE IN YOUR HANDS</div>
+      <h1>让宇宙，<br>随手而动<span>。</span></h1>
+      <p>伸出手，把一片星云握在掌心。<br>每一次张合，都是一次微小的宇宙诞生。</p>
+      <button id="camera" class="primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="13" height="14" rx="3"/><path d="m16 9 5-3v12l-5-3"/></svg><span>开启摄像头</span><b>↗</b></button>
+      <div class="permission-note">仅使用摄像头，不使用麦克风。可随时关闭。</div>
+      <div id="status" class="status" role="status" aria-live="polite">鼠标移动即可试玩，按住鼠标聚拢粒子。</div>
+    </section>
+    <section class="camera-panel" aria-label="摄像头预览和手势状态">
+      <div class="panel-head"><span><i id="camera-dot"></i><span id="camera-label">CAMERA OFF</span></span><span id="gesture-label">鼠标试玩</span></div>
+      <div class="video-wrap"><video id="video" autoplay muted playsinline></video><canvas id="skeleton"></canvas><div id="video-placeholder"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M23 36V18a4 4 0 0 1 8 0v13-19a4 4 0 0 1 8 0v20-15a4 4 0 0 1 8 0v23-12a4 4 0 0 1 8 0v16c0 11-7 17-18 17-8 0-12-4-16-10L11 36c-4-5 2-10 6-6l6 6Z"/></svg><span>让手掌出现在这里</span></div><span class="video-caption">HAND TRACKING / LOCAL</span></div>
+      <div class="signal"><span>聚合</span><div><i id="energy"></i></div><span>扩散</span></div>
+    </section>
+    <div class="space-label" aria-hidden="true"><span>✦</span> YOUR PERSONAL COSMOS <small id="particle-count">6,000 PARTICLES</small></div>
+    <section class="controls" aria-label="粒子效果设置">
+      <div class="control-group shape-controls"><span class="control-label">星云形态</span><div class="segmented"><button data-shape="galaxy" aria-pressed="true">旋涡星系</button><button data-shape="sphere" aria-pressed="false">能量球</button><button data-shape="ring" aria-pressed="false">星环</button></div></div>
+      <div class="control-group color-controls"><span class="control-label">光谱</span><div class="swatches"><button class="swatch violet" data-palette="violet" aria-label="蓝紫星云" aria-pressed="true"></button><button class="swatch aqua" data-palette="aqua" aria-label="青绿极光" aria-pressed="false"></button><button class="swatch amber" data-palette="amber" aria-label="琥珀太阳" aria-pressed="false"></button></div></div>
+      <div class="control-group density-control"><label class="control-label" for="density">粒子密度 <output id="density-value">6,000</output></label><input id="density" type="range" min="2000" max="12000" step="1000" value="6000"></div>
+      <button id="pause" class="quiet-button" aria-pressed="false">暂停动画</button>
+    </section>
+  </main>
+  <footer><div class="gesture-guide"><span><b>01</b> 慢张 · 放大</span><span><b>02</b> 慢收 · 缩小</span><span><b>03</b> 快速张合 · 准备</span><span><b>04</b> 移动转掌 · 牵引旋转</span></div><span class="fps"><i></i><span id="fps">— FPS</span></span></footer>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
